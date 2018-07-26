@@ -13,6 +13,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
+        <groupId>com.redhat.training.msa</groupId>
 	<artifactId>bonjour</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
