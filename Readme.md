@@ -24,3 +24,19 @@ Deploy the application in OpenShift
 3. Execute:
 
 		mvn clean fabric8:deploy
+
+Build and Deploy in OpenShift using S2I
+---------------------------------------
+
+1. Make sure to be logged into OpenShift.
+2. Make sure you have created or selected the appropriate OpenShift project.
+3. Execute:
+
+		oc new-app --name bonjour java~https://github.com/nsabine/bonjour
+		oc expose svc bonjour
+		oc get route bonjour
+
+4. The application will be running at the host returned above, with the REST service at /api/bonjour
+
+		http://ROUTE_HOSTNAME/api/bonjour
+
